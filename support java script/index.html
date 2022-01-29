@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiosk Escaper</title>
+    <script src="/js/open_link.js"></script>
+    <script src="/js/protocols.js"></script>
+</head>
+
+<body>
+    <button onclick="window.print();return false">Print this page</button>
+    <input type="file">
+    <button onclick="alert('hello')"> Alert test</button>
+    <button onclick=" debugger;">debug mode</button>
+    <hr>
+    <div class="open_link">
+        <label for="url_to_open">open url</label>
+        <input id="url_to_open" type="text" value="https://google.com">
+        <button onclick="open_link_tab()">new_tab</button>
+        <button onclick="open_link_window()">new_window</button>
+        <button onclick="open_link_here()"> this_window </button>
+    </div>
+    <hr>
+    <div class="protocols" id="protocols_list">
+        <h1>protocols</h1>
+        <button onclick="show_protocols()" id='show_pt_bt'>show_all</button>
+
+    </div>
+
+</body>
+
+</html>
