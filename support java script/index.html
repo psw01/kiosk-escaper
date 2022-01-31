@@ -8,6 +8,7 @@
     <title>Kiosk Escaper</title>
     <script src="/js/open_link.js"></script>
     <script src="/js/protocols.js"></script>
+    <script src="/js/iframes.js"></script>
 </head>
 
 <body>
@@ -15,6 +16,7 @@
     <input type="file">
     <button onclick="alert('hello')"> Alert test</button>
     <button onclick=" debugger;">debug mode</button>
+
     <hr>
     <div class="open_link">
         <label for="url_to_open">open url</label>
@@ -25,11 +27,17 @@
     </div>
     <hr>
     <div class="protocols" id="protocols_list">
-        <h1>protocols</h1>
-        <button onclick="show_protocols()" id='show_pt_bt'>show_all</button>
+        <button onclick="show_protocols()" id='show_pt_bt'>protocols</button>
 
     </div>
+    <hr>
+    <div class="iframes">
+        <iframe src="" frameborder="1" id="u_iframe" style="resize: both;"></iframe><br>
+        <label for="iframe_url">iframe check</label>
+        <input type="text" name="url" id="iframe_url" value='https://example.com'>
+        <button onclick="iframe_update()">show</button>
 
+    </div>
 </body>
 
 </html>
